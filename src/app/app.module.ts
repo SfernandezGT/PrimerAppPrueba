@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { Camera } from '@ionic-native/camera/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { Calendar } from '@ionic-native/calendar/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx'
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { Calendar } from '@ionic-native/calendar/ngx';
     SplashScreen,
     Camera,
     Calendar,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
