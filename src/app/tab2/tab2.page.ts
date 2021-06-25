@@ -8,6 +8,7 @@ import { PhotoService } from '../services/photo.service';
 })
 export class Tab2Page {
   currentImage: any;
+  public read;
 
   constructor(public photoService: PhotoService) {  }
 

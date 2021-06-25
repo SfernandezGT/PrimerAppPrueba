@@ -7,6 +7,10 @@
 </ion-header>
 
 <ion-content>
+  <ion-button expand="full" (click)="geolocalizacionNative()" color="warning">
+    <ion-icon name="map"></ion-icon>
+    <ion-label>Posicion Actual</ion-label>
+  </ion-button>
   <ion-row class="ion-text-center">
     <ion-col size="4">
       <ion-title size="large"> Longitud </ion-title> {{ CoordenadasLongitud }}

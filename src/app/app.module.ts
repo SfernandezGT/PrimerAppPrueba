@@ -11,14 +11,19 @@ import { AppComponent } from './app.component';
 import { Camera } from '@ionic-native/camera/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { Calendar } from '@ionic-native/calendar/ngx';
-import { Geolocation } from '@ionic-native/geolocation/ngx'
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { Contacts } from '@ionic-native/contacts/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    IonicStorageModule.forRoot(), HttpClientModule
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    IonicStorageModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
@@ -26,8 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     Camera,
     Calendar,
     Geolocation,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    Vibration,
+    Contacts,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

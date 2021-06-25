@@ -11,9 +11,6 @@ export class Tab3Page {
   public CoordenadasLatitud;
   public CoordenadasAltitud;
   constructor(private readonly geolocation: Geolocation) {}
-  ngOnInit() {
-    this.geolocalizacionNative();
-  }
 
   geolocalizacionNative() {
     this.geolocation.getCurrentPosition().then((geoposition: Geoposition) => {

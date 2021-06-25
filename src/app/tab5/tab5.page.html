@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Plugin Vibration test and Load Contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-button expand="full" (click)="vibratemetod()" color="danger">
+      Vibration
+    </ion-button>
+
+    <ion-button expand="full" (click)="cargarContactos()" color="success">
+      Contacts
+    </ion-button>
+
+ 
+
+  <ion-list>
+    <ion-item-sliding  *ngFor="let contact of myContacts">
+      <ion-item>
+        <ion-label>{{ contact.name.givenName }} <b>{{ contact.name.familyName }}</b>
+          <p>
+            {{ contact.phoneNumbers [ 0 ].value }}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
